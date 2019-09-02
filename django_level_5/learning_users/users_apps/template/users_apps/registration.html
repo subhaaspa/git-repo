@@ -1,0 +1,29 @@
+{% extends 'users_apps/base.html' %}
+{% load staticfiles %}
+
+{% block body_block %}
+<div class="container" align = "center ">
+  <div class="jumbotron" align = "center" >
+      {% if registered %}
+        <h3> Thank you for registering !</h3>
+      {% else %}
+      <h3> This place is registration page</h3>
+      <h3> Fill up the form for registration </h3>
+
+        <form class='form-group' enctype="multipart/form-data" method="POST">
+          {% csrf_token %}
+          {{ user_form.as_p }}
+          {{ profile_form.as_p }}
+
+        <input class='btn btn-primary' type = "submit"  value="Submit">
+
+        </form>
+      {% endif %}
+
+
+
+  </div>
+</div>
+
+
+{% endblock %}
