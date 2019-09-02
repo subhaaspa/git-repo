@@ -30,7 +30,7 @@ SECRET_KEY = 'zppk$wu_g#+tfha_^(-#hx$x^9j5*+j0lc+q*fw24l^b*^8c(g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://subhaaspa.pythonanywhere.com',]
 
 
 # Application definition
